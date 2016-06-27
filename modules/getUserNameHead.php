@@ -6,18 +6,25 @@
             width: 100%;
             height: 100%;
             z-index: 10;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0,0,0,0.9);
             display: none;
         }
         
         #userNamePrompt {
-            background-color: black;
-            border: 20px solid rgba(0,0,0,0.9);
-            width: 100%;
-            height: 100vh;
+            background-color: #222222;
+            border: 20px solid #222222;
+            border-radius: 20px;
+            padding: 10px;
+            width: 75%;
+            max-width: 500px;
+            height: 75%;
+            max-height: 150px;
             color: white;
             position: fixed;
+            margin: auto;
             top:0; right:0; bottom:0; left:0;
+            overflow-y: auto;
+            overflow-x: hidden;
             display: none;
         }
     </style>
