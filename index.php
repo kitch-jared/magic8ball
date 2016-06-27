@@ -55,7 +55,7 @@
 <body onload="docLoad()">
     <?php include("getUserNameBody.php"); ?>
     
-    <p id="text">Welcome back to the Magic 8 Ball!<br>
+    <p id="text">Welcome back to the Magic 8 Ball, <span id="userName"></span>!<br>
         Ask a 'Yes' or 'No' question!<br></p>
 
     <button type="button" onclick='magic()'>Ask A Question</button>

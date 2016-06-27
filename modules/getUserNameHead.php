@@ -30,6 +30,8 @@
                 document.getElementById('userNamePromptOverlay').style.display = "block";
                 document.getElementById('userNamePrompt').style.display = "block";
             }
+            
+            document.getElementById('userName').innerHTML = storedUser;
         }
         
         function saveUserName() {
@@ -41,5 +43,6 @@
         
         function forgetUserName() {
             localStorage.removeItem('Magic8BallUserName');
+            window.location.reload();
         }
     </script>
