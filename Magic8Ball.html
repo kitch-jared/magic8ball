@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Magic 8 Ball - JSON and AJAX</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var xmlHttp = new XMLHttpRequest();
+            var url = "Magic8Ball.txt";
+            
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readystate == 4 && xmlhttp.status == 200){
+                    var arrayAnswers = JSON.parse(xmlhttp.responseText);
+                    magic(arrayAnswers);
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+            
+            function magic(answers) {
+                var reply = '';
+                var i;
+                for (i = 0; i < answers.length; i++) {
+                    response += answers[i].answer;
+                }
+                document.getElementById("display").innerHTML = response;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="display"></div>
+    </body>
+</html>
