@@ -1,0 +1,201 @@
+
+var answerArray = [
+    {
+    "answer": "It is certain"
+    },
+    {
+    "answer":"It is decidedly so"
+    },
+    {
+    "answer":"Without a doubt",
+    },
+    {
+    "answer":"Yes definitely"
+    },
+    {
+    "answer":"You may rely on it"
+    },
+    {
+    "answer":"As I see it, yes"
+    },
+    {
+    "answer":"Most likely"
+    },
+    {
+    "answer":"Outlook good"
+    },
+    {
+    "answer":"Yes"
+    },
+    {
+    "answer":"Signs point to yes"
+    },
+    {
+    "answer":"Reply hazy try again",
+    },
+    {
+    "answer":"Ask again later"
+    },
+    {
+    "answer":"Better not tell you now"
+    },
+    {
+    "answer":"Cannot predict now"
+    },
+    {
+    "answer":"Concentrate and ask again"
+    },
+    {
+    "answer":"Don't count on it"
+    },
+    {
+    "answer":"My reply is no"
+    },
+    {
+    "answer":"My sources say no"
+    },
+    {
+    "answer":"Outlook not so good"
+    },
+    {
+    "answer":"Very doubtful"
+    },
+    {
+    "answer":"Why would you ask such a silly question?"
+    },
+    {
+    "answer":"In your dreams"
+    },
+    {
+    "answer":"Of course silly"
+    },
+    {
+    "answer":"Why do you doubt?"
+    },
+    {
+    "answer":"Ask someone else"
+    },
+    {
+    "answer":"Try another 8 ball"
+    },
+    {
+    "answer":"I think so"
+    },
+    {
+    "answer":"Maybe next year", 
+    },
+    {
+    "answer":"Don't ask again"
+    },
+    {
+    "answer":"I don't know"
+    },
+    {
+    "answer":"You can bet on it"
+    },
+    {
+    "answer":"Most definitely"
+    },
+    {
+    "answer":"Most definitely"
+    },
+    {
+    "answer":"Quite absolute"
+    },
+    {
+    "answer":"Maybe pigs can fly"
+    },
+    {
+    "answer":"What did you say?"
+    },
+    {
+    "answer":"Sorry I didn't hear that"
+    },
+    {
+    "answer":"Like that'll ever happen"
+    },
+    {
+    "answer":"No"
+    },
+    {
+    "answer":"Never"
+    },
+    {
+    "answer":"You already know the answer to that"
+    },
+    {
+    "answer":"So I asked my friend, he didn't know either..."
+    },
+    {
+    "answer":"Sorta"
+    },
+    {
+    "answer":"Kinda"
+    },
+    {
+    "answer":"Not exactly"
+    },
+    {
+    "answer":"With luck, yes"
+    },
+    {
+    "answer":"Even with luck, no"
+    },
+    {
+    "answer":"I have no idea..."
+    },
+    {
+    "answer":"I got nothing",
+    },
+    {
+    "answer":"Error detected in your future"
+    },
+    {
+    "answer":"That would be a mistake"
+    },
+    {
+    "answer":"Turn back now"
+    },
+    {
+    "answer":"You can bet on it"
+    },
+    {
+    "answer":"Don't worry about it" "Yes
+    },
+    {
+    "answer":"No, but technically yes"
+    },
+    {
+    "answer":"Only God knows the answer to that..."
+    },
+    {
+    "answer":"Just do it!"
+    },
+    {
+    "answer":"If you try one more time I might say yes"
+    },
+    {
+    "answer":"Yes, but you didn't hear it from me"
+    },
+    {
+    "answer":"Uhh, I think that's a yes?"
+    },
+    {
+    "answer":"Should have asked yesterday"
+    },
+    {
+    "answer":"Not even possible"
+    },
+    {
+    "answer":"This is a joke right?"
+    },
+    {
+    "answer": "You're seriously asking me that!?"
+    },
+    {
+    "answer": "Bad idea"
+    },
+    {
+    "answer": "Think on it,the answer will come" 
+    }
+    ];
