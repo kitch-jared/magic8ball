@@ -1,0 +1,72 @@
+
+var negativeArray = [
+{
+    "noAnswer":"Don't count on it"
+    },
+    {
+    "noAnswer":"My reply is no"
+    },
+    {
+    "noAnswer":"My sources say no"
+    },
+    {
+    "noAnswer":"Outlook not so good"
+    },
+    {
+    "noAnswer":"Very doubtful"
+    },
+    {
+    "noAnswer":"No"
+    },
+    {
+    "noAnswer":"Never"
+    },
+    {
+    "noAnswer":"Not exactly"
+    },
+    {
+    "noAnswer":"Even with luck, no"
+    },
+    {
+    "noAnswer":"I have no idea..."
+    },
+    {
+    "noAnswer":"I got nothing"
+    },
+{
+    "noAnswer":"Error detected in your future"
+    },
+    {
+    "noAnswer":"That would be a mistake"
+    },
+    {
+    "noAnswer":"Turn back now"
+    },
+    {
+    "noAnswer":"No, but technically yes"
+    },
+    {
+    "noAnswer":"Should have asked yesterday"
+    },
+    {
+    "noAnswer":"Not even possible"
+    },
+    {
+    "noAnswer": "Bad idea"
+    },
+    {
+    "noAnswer":"Better not tell you now"
+    },
+    {
+    "noAnswer":"Cannot predict now"
+    },
+    {
+    "noAnswer":"In your dreams"
+    },
+    {
+    "noAnswer":"Don't ask again"
+    },
+    {
+    "noAnswer":"Like that'll ever happen"
+    }
+    ];
