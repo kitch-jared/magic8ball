@@ -1,13 +1,64 @@
-<!DOCTYPE HTML>
-<html lang="en-us">
-<head>
-    <meta charset="utf-8">
-    <title>Magic 8 Ball</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
-    <?php set_include_path($_SERVER['DOCUMENT_ROOT'].'/modules'); ?>
 
-    <?php include("getUserNameHead.php"); ?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Magic 8 Ball Stuff</title>
+    <link href="css/8ball.css" rel="stylesheet" type="text/css"/>
+    <style>
+        #userNamePromptOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            background-color: rgba(0,0,0,0.9);
+            display: none;
+        }
+        
+        #userNamePrompt {
+            background-color: #222222;
+            border: 20px solid #222222;
+            border-radius: 20px;
+            padding: 10px;
+            width: 75%;
+            max-width: 500px;
+            height: 75%;
+            max-height: 150px;
+            color: white;
+            position: fixed;
+            margin: auto;
+            top:0; right:0; bottom:0; left:0;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: none;
+        }
+    </style>
     
+    <script type="text/javascript">
+        function getUserName () {
+            var storedUser = localStorage.getItem('Magic8BallUserName');
+            
+            if (!storedUser) {
+                document.getElementById('userNamePromptOverlay').style.display = "block";
+                document.getElementById('userNamePrompt').style.display = "block";
+            }
+            
+            document.getElementById('userName').innerHTML = storedUser;
+        }
+        
+        function saveUserName() {
+            userName = document.getElementById('name').value;
+            localStorage.setItem('Magic8BallUserName', userName);
+            document.getElementById('userNamePromptOverlay').style.display = "none";
+            document.getElementById('userNamePrompt').style.display = "none";
+        }
+        
+        function forgetUserName() {
+            localStorage.removeItem('Magic8BallUserName');
+            window.location.reload();
+        }
+    </script>
     <script type="text/javascript">
         /* Input: 
          * Processing: 
@@ -50,19 +101,41 @@
             document.getElementById('output').innerHTML = magicAnswer;
         }
     </script>
-</head>
-
-<body onload="docLoad()">
-    <?php include("getUserNameBody.php"); ?>
-    
-    <p id="text">Welcome back to the Magic 8 Ball, <span id="userName"></span>!<br>
-        Ask a 'Yes' or 'No' question!<br></p>
-
-    <button type="button" onclick='magic()'>Ask A Question</button>
-    <p><div id='output'></div></p>
-
-    <a href="javascript:void(0);" onclick="forgetUserName()">forget me</a>
-
-</body>
+  </head>
+  <body onload="docLoad()">
+    <div id="userNamePromptOverlay">
+      <div id="userNamePrompt">
+        <form>
+          "Welcome to the Magic 8 Ball where all of your questions may be answered."
+          <br>
+          <br>
+          "Please enter your name below so that we might better serve you:"
+          <br>
+          <input type="text" id="name">
+          <br>
+          <input type="submit" value="Save my name" onclick="saveUserName()">
+        </form>
+      </div>
+    </div>
+      <p id="text">
+        "Welcome back to the Magic 8 Ball, "<span id="userName"></span>"!"
+        <br>
+        "Ask a 'Yes' or 'No' question!"
+      </p>
+    <div>
+      <img src="images/8 ball.png" alt="8 ball"/>
+    <button type="button" onclick='magic()' id='button1'>spin</button>
+    <button type="button" onclick='magic()' id='button2'>roll</button>
+    <button type="button" onclick='magic()' id='button3'>shake</button>
+    <button type="button" onclick='magic()' id='button4'>throw against wall</button>
+    <button type="button" onclick='magic()' id='button5'>run over with car</button>
+    <div id="triangle">
+      <p></p>
+      <div id="output"></div>
+      <p></p>
+    </div>
+    </div>
+      <a href='javascript:void(0);' onclick='forgetUserName()'>Forget Me</a>
+     
+  </body>
 </html>
-
