@@ -68,3 +68,37 @@ div img{
   height:80px;
   margin:0px;
 }
+
+
+@media screen and (max-width: 600px) {
+    figure img {
+        width: 100%;
+        height: auto;
+    }
+    figure figcaption {
+        line-height: 140%;
+    }
+    p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    h1 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+     h2 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+     h3 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    h4 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    ol li {
+        margin-left: 0;
+        margin-right: 0; 
+    }
