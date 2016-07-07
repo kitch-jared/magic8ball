@@ -117,25 +117,29 @@
         </form>
       </div>
     </div>
-      <p id="text">
+      <p id="intro">
         "Welcome back to the Magic 8 Ball, "<span id="userName"></span>"!"
         <br>
         "Ask a 'Yes' or 'No' question!"
       </p>
-    <div>
-      <img src="images/8_ball.png" alt="8 ball"/>
+      <p>
     <button type="button" onclick='magic()' id='button1'>spin</button>
     <button type="button" onclick='magic()' id='button2'>roll</button>
     <button type="button" onclick='magic()' id='button3'>shake</button>
     <button type="button" onclick='magic()' id='button4'>throw against wall</button>
     <button type="button" onclick='magic()' id='button5'>run over with car</button>
-    <div id="triangle">
-      <p></p>
-      <div id="output"></div>
-      <p></p>
+      </p>
+    
+      <img id="ball" src="images/8_ball.png" alt="8 ball"/>
+
+      <img id="tri" src="images/triangle.gif" alt="tri"/>
+      
+      <p><div id="output"></div></p>
+
     </div>
     </div>
+    <div id="forget">
       <a href='javascript:void(0);' onclick='forgetUserName()'>Forget Me</a>
-     
+    </div>
   </body>
 </html>
