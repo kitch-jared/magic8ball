@@ -1,7 +1,70 @@
-body {
-    font-family:arial;
-    background: #000000;
-    color: #00FF00;
-    font-size: 20px;
-    
+
+body{
+}
+
+#text{
+    text-align: center;
+    font-size: 2em;
+    background-color:#BEBEC3;
+    border-radius: 15px;
+}
+
+#button1{
+    position:absolute;
+    width:150px;
+    height:25px;
+    margin-left:-900px;
+}
+#button2{
+    position:absolute;
+    width:150px;
+    height:25px;
+    margin-left:-740px;
+}
+#button3{
+    position:absolute;
+    width:150px;
+    height:25px;
+    margin-left:-580px;
+}
+#button4{
+    position:absolute;
+    width:150px;
+    height:25px;
+    margin-left:-420px;
+}
+#button5{
+    position:absolute;
+    width:150px;
+    height:25px;
+    margin-left:-260px;
+}
+
+div img{
+    margin-left: 175px;
+    margin-top: -10px;
+}
+
+#triangle{
+  position:absolute;
+  width:0px;
+  height:0px;
+  border-top:175px solid blue;
+  border-right:110px solid transparent;
+  /*border-bottom:150px solid blue;*/
+  border-left:110px solid transparent;
+  margin-left: 570px;
+  margin-top:-475px;
+}
+#output{
+  text-shadow: 3px 3px 3px #000000;
+  font-size:1.2em;
+  color:white;
+  text-align:center;
+  top:-145px;
+  left:-75px;
+  position:absolute;
+  width:150px;
+  height:80px;
+  margin:0px;
 }

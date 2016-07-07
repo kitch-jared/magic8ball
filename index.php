@@ -3,7 +3,7 @@
 <html>
   <head>
     <title>Magic 8 Ball Stuff</title>
-    <link href="css/8ball.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <style>
         #userNamePromptOverlay {
             position: fixed;
