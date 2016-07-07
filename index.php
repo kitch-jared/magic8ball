@@ -123,7 +123,7 @@
         "Ask a 'Yes' or 'No' question!"
       </p>
     <div>
-      <img src="images/8 ball.png" alt="8 ball"/>
+      <img src="images/8_ball.png" alt="8 ball"/>
     <button type="button" onclick='magic()' id='button1'>spin</button>
     <button type="button" onclick='magic()' id='button2'>roll</button>
     <button type="button" onclick='magic()' id='button3'>shake</button>
