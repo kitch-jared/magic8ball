@@ -118,9 +118,9 @@
       </div>
     </div>
       <p id="intro">
-        "Welcome back to the Magic 8 Ball, "<span id="userName"></span>"!"
+        Welcome back to the Magic 8 Ball, <span id="userName"></span>!
         <br>
-        "Ask a 'Yes' or 'No' question!"
+        Ask a 'Yes' or 'No' question!
       </p>
       <p>
     <button type="button" onclick='magic()' id='button1'>spin</button>
