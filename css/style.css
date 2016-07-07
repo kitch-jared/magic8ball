@@ -2,7 +2,15 @@
 body{
 }
 
-#text{
+p {
+    text-align: center;
+}
+#forget{
+    text-align: left;
+}
+
+
+#intro{
     text-align: center;
     font-size: 2em;
     background-color:#BEBEC3;
@@ -10,96 +18,122 @@ body{
 }
 
 #button1{
-    position:absolute;
+
     width:150px;
     height:25px;
-    margin-left:-900px;
+    
 }
 #button2{
-    position:absolute;
+
+
     width:150px;
     height:25px;
-    margin-left:-740px;
+    
 }
 #button3{
-    position:absolute;
+
     width:150px;
     height:25px;
-    margin-left:-580px;
+    
 }
 #button4{
-    position:absolute;
+
     width:150px;
     height:25px;
-    margin-left:-420px;
+    
 }
 #button5{
-    position:absolute;
+
     width:150px;
     height:25px;
-    margin-left:-260px;
+    
 }
 
-div img{
-    margin-left: 175px;
-    margin-top: -10px;
-}
+    #ball {
+  position:relative;
+  width:80%;
+  margin-left:-40%;
+  left:25%;
 
-#triangle{
-  position:absolute;
-  width:0px;
-  height:0px;
-  border-top:175px solid blue;
-  border-right:110px solid transparent;
-  /*border-bottom:150px solid blue;*/
-  border-left:110px solid transparent;
-  margin-left: 570px;
-  margin-top:-475px;
-}
+
+        
+    }
 #output{
+
   text-shadow: 3px 3px 3px #000000;
   font-size:1.2em;
-  color:white;
+  color:red;
   text-align:center;
-  top:-145px;
-  left:-75px;
   position:absolute;
-  width:150px;
-  height:80px;
-  margin:0px;
+  top: 0px;
+  margin-top:55%;
+  margin-left: 40%;
+
 }
+
+#tri {
+    float: left;
+  width:20%;
+  position:relative;
+  margin-left:5%;
+  margin-top:21.5%;
+  left:35%;
+}
+
+
 
 
 @media screen and (max-width: 600px) {
-    figure img {
+    #ball{
+        position:static;
         width: 100%;
         height: auto;
-    }
-    figure figcaption {
-        line-height: 140%;
-    }
-    p {
         margin-left: 0;
         margin-right: 0;
     }
-    h1 {
+    #tri {
+    float: left;
+    width:25%;
+    position:relative;
+    margin-left:-12.5%;
+    margin-top:-49.5%;
+    left:50%;
+}
+
+
+    #button1 {
+        width:150px;
+        height:25px;
         margin-left: 0;
         margin-right: 0;
     }
-     h2 {
+    #button2{
+        
+        width:150px;
+        height:25px;
         margin-left: 0;
         margin-right: 0;
-    }
-     h3 {
+}
+    #button3{
+       
+        width:150px;
+        height:25px;
+        margin-left: 0;
+        margin-right: 0;;
+}
+    #button4{
+      
+        width:150px;
+        height:25px;
         margin-left: 0;
         margin-right: 0;
-    }
-    h4 {
+}
+    #button5{
+       
+        width:150px;
+        height:25px;
         margin-left: 0;
         margin-right: 0;
-    }
-    ol li {
-        margin-left: 0;
-        margin-right: 0; 
-    }
+}
+
 }
