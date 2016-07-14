@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Magic 8 Ball Stuff</title>
+    <title>Magic 8 Ball</title>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="css/8ball.css" rel="stylesheet" type="text/css" />
     
