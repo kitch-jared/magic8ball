@@ -66,6 +66,7 @@ translate(-50%,-50%) rotate(80deg);
                Also need to change '.ball:hover .tri' */
   opacity: 0;
   transition: ease-in all 1.5s;
+  z-index: 1;
 }
 
 .output{
