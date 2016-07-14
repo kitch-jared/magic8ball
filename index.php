@@ -4,6 +4,7 @@
   <head>
     <title>Magic 8 Ball Stuff</title>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/8ball.css" rel="stylesheet" type="text/css" />
     <style>
         #userNamePromptOverlay {
             position: fixed;
@@ -11,7 +12,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 10;
+            z-index: 25;
             background-color: rgba(0,0,0,0.9);
             display: none;
         }
@@ -24,7 +25,7 @@
             width: 75%;
             max-width: 500px;
             height: 75%;
-            max-height: 150px;
+            max-height: 170px;
             color: white;
             position: fixed;
             margin: auto;
@@ -69,38 +70,11 @@
             getUserName(); // name will be stored in Local Storage as Magic8BallUserName
         }
  
-        function possibleAnswers(ans) {
-            var select = Math.floor(Math.random() * ans.length);
-            var ball = ans[select];
-            return ball;
-        }
- 
-        function magic() {
-            var answer = [ "It is certain", "It is decidedly so", "Without a doubt", 
-                           "Yes definitely", "You may rely on it", "As I see it, yes",
-                           "Most likely", "Outlook good", "Yes", "Signs point to yes",
-                           "Reply hazy try again", "Ask again later", "Better not tell you now",
-                           "Cannot predict now", "Concentrate and ask again", "Don't count on it",
-                           "My reply is no", "My sources say no", "Outlook not so good", "Very doubtful",
-                           "Why would you ask such a silly question?", "In your dreams", "Of course silly", 
-                           "Why do you doubt?", "Ask someone else", "Try another 8 ball", "I think so", 
-                           "Maybe next year", "Don't ask again", "I don't know", "You can bet on it", 
-                           "Most definitley", "Quite absolute", "Maybe pigs can fly", "What did you say?",
-                           "Sorry I didn't hear that", "Like that'll ever happen", "No", "Never", 
-                           "You already know the answer to that", "So I asked my friend, he didn't know either...",
-                           "Sorta", "Kinda", "Not exactly", "With luck, yes", "Even with luck, no", "I have no idea...", 
-                           "I got nothing", "Error detected in your future", "That would be a mistake", "Turn back now", 
-                           "You can bet on it", "Don't worry about it", "Yes, but technically no", "No, but technically yes",
-                           "Only God knows the answer to that...", "Just do it!", "If you try one more time I might say yes",
-                           "Yes, but you didn't hear it from me", "Uhh, I think that's a yes?", "Should have asked yesterday",
-                           "Not even possible", "This is a joke right?", "You're seriously asking me that!?", "Bad idea",
-                           "Think on it, the answer will come" ];
- 
-            var magicAnswer = possibleAnswers(answer);
- 
-            document.getElementById('output').innerHTML = magicAnswer;
-        }
     </script>
+    
+    <style>
+        
+   </style>
   </head>
   <body onload="docLoad()">
     <div id="userNamePromptOverlay">
@@ -122,22 +96,64 @@
         <br>
         Ask a 'Yes' or 'No' question!
       </p>
-      <p>
-    <button type="button" onclick='magic()' id='button1'>spin</button>
-    <button type="button" onclick='magic()' id='button2'>roll</button>
-    <button type="button" onclick='magic()' id='button3'>shake</button>
-    <button type="button" onclick='magic()' id='button4'>throw against wall</button>
-    <button type="button" onclick='magic()' id='button5'>run over with car</button>
-      </p>
-    
-      <img id="ball" src="images/8_ball.png" alt="8 ball"/>
-
-      <img id="tri" src="images/triangle.gif" alt="tri"/>
-      
-      <p><div id="output"></div></p>
-
+    <div>
+    <div class='Magic8Ball'>
+        <div class="position">
+            <div class="ball">
+                <div class="innerBall"></div>
+                <div class="circle"></div>
+                <div class="tri"></div>
+                <div class="output"></div>
+            </div>
+        </div>
     </div>
-    </div>
+</div>
+      <div>
+      <ul>
+          <li><button class='button1' value='spin'>Spin</button></li>
+          <script>
+        // Spin
+        var boxOne = document.getElementsByClassName('Magic8Ball')[0]
+
+        document.getElementsByClassName('button1')[0].onclick = function() {
+          if(this.innerHTML === 'Spin') 
+          { 
+            this.innerHTML = 'Stop';
+            boxOne.classList.add('spin');
+          } else if (this.innerHTML === 'Stop')
+          {  
+            this.innerHTML = 'Answer';
+            boxOne.classList.remove('spin');
+          } else {
+            this.innerHTML = 'Spin';
+            boxOne.classList.remove('output');
+          }  
+        }
+        </script>
+          <li><button class='button2' value='shake-crazy'>Shake</button></li>
+        <script>
+        // Shake
+        var boxTwo = document.getElementsByClassName('Magic8Ball')[0]
+
+        document.getElementsByClassName('button2')[0].onclick = function() {
+          if(this.innerHTML === 'Shake') 
+          { 
+            this.innerHTML = 'Stop';
+            boxTwo.classList.add('shake-crazy');
+          } else if (this.innerHTML === 'Stop')
+          {  
+            this.innerHTML = 'Answer';
+            boxTwo.classList.remove('shake-crazy');
+          } else {
+            this.innerHTML = 'Shake';
+            boxTwo.classList.remove('output');
+          }
+        }
+    </script>
+      </ul>
+      </div>
+   
+
     <div id="forget">
       <a href='javascript:void(0);' onclick='forgetUserName()'>Forget Me</a>
     </div>

@@ -17,123 +17,19 @@ p {
     border-radius: 15px;
 }
 
-#button1{
+.button1{
 
     width:150px;
     height:25px;
     
 }
-#button2{
+.button2{
 
-
-    width:150px;
-    height:25px;
-    
-}
-#button3{
-
-    width:150px;
-    height:25px;
-    
-}
-#button4{
-
-    width:150px;
-    height:25px;
-    
-}
-#button5{
 
     width:150px;
     height:25px;
     
 }
 
-    #ball {
-  position:relative;
-  width:80%;
-  margin-left:-40%;
-  left:25%;
 
 
-        
-    }
-#output{
-
-  text-shadow: 3px 3px 3px #000000;
-  font-size:1.2em;
-  color:white;
-  text-align:center;
-  position:absolute;
-  top: 0px;
-  margin-top:55%;
-  margin-left: 40%;
-
-}
-
-#tri {
-    float: left;
-  width:20%;
-  position:relative;
-  margin-left:5%;
-  margin-top:21.5%;
-  left:35%;
-}
-
-
-
-
-@media screen and (max-width: 600px) {
-    #ball{
-        position:static;
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    #tri {
-    float: left;
-    width:25%;
-    position:relative;
-    margin-left:-12.5%;
-    margin-top:-49.5%;
-    left:50%;
-}
-
-
-    #button1 {
-        width:150px;
-        height:25px;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    #button2{
-        
-        width:150px;
-        height:25px;
-        margin-left: 0;
-        margin-right: 0;
-}
-    #button3{
-       
-        width:150px;
-        height:25px;
-        margin-left: 0;
-        margin-right: 0;;
-}
-    #button4{
-      
-        width:150px;
-        height:25px;
-        margin-left: 0;
-        margin-right: 0;
-}
-    #button5{
-       
-        width:150px;
-        height:25px;
-        margin-left: 0;
-        margin-right: 0;
-}
-
-}
