@@ -59,9 +59,11 @@ translate(-50%,-50%) rotate(80deg);
 	height: 0px;
   left: 50%;
   top: 55%;
-	border-left: 70px solid transparent;
-	border-right: 70px solid transparent;
-	border-top: 100px solid rgba(60,10,120,0.0);
+	border-left: 65px solid transparent;
+	border-right: 65px solid transparent;
+	border-top: 113px solid rgba(60,10,120,0.0);
+            /* for equilateral triangle, top should be ((left+right)*.866)
+               Also need to change '.ball:hover .tri' */
   opacity: 0;
   transition: ease-in all 1.5s;
 }
@@ -92,7 +94,7 @@ translate(-50%,-50%) rotate(80deg);
 }
 
 .ball:hover .tri{
-  border-top: 90px solid rgba(60,10,120,0.9);
+  border-top: 113px solid rgba(60,10,120,0.9);
   -webkit-transform: translate(-50%,-50%) rotate(0deg);
   transform: translate(-50%,-50%) rotate(0deg);
   opacity: 1;

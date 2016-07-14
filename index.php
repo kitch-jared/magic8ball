@@ -137,6 +137,7 @@
     </div>
    
     <div id="forget">
+        <br>
         <a href='javascript:void(0);' onclick='forgetUserName()'>Forget Me</a>
     </div>
     
