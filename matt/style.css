@@ -1,0 +1,35 @@
+
+body{
+}
+
+p {
+    text-align: center;
+}
+#forget{
+    text-align: left;
+}
+
+
+#intro{
+    text-align: center;
+    font-size: 2em;
+    background-color:#BEBEC3;
+    border-radius: 15px;
+}
+
+.button1{
+
+    width:150px;
+    height:25px;
+    
+}
+.button2{
+
+
+    width:150px;
+    height:25px;
+    
+}
+
+
+
