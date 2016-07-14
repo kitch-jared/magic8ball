@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,23 +28,15 @@
             localStorage.removeItem('Magic8BallUserName');
             window.location.reload();
         }
-    </script>
-    <script type="text/javascript">
-        /* Input: 
-         * Processing: 
-         * Output: 
-         */
 
         function docLoad() {
             getUserName(); // name will be stored in Local Storage as Magic8BallUserName
         }
  
     </script>
-    
-    <style>
-        
-   </style>
+
   </head>
+  
   <body onload="docLoad()">
     <div id="userNamePromptOverlay">
       <div id="userNamePrompt">
@@ -61,71 +52,93 @@
         </form>
       </div>
     </div>
-      <p id="intro">
+      
+    <p id="intro">
         Welcome back to the Magic 8 Ball, <span id="userName"></span>!
         <br>
         Ask a 'Yes' or 'No' question!
-      </p>
+    </p>
+    
     <div>
-    <div class='Magic8Ball'>
-        <div class="position">
-            <div class="ball">
-                <div class="innerBall"></div>
-                <div class="circle"></div>
-                <div class="tri"></div>
-                <div class="output"></div>
+        <div class='Magic8Ball'>
+            <div class="position">
+                <div class="ball">
+                    <div class="innerBall"></div>
+                    <div class="circle"></div>
+                    <div class="tri"></div>
+                    <div class="output"></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-      <div>
-      <ul>
-          <li><button class='button1' value='spin'>Spin</button></li>
-          <script>
-        // Spin
-        var boxOne = document.getElementsByClassName('Magic8Ball')[0]
+    
+    <div>
+        <ul>
+            <li><button class='button1' value='spin'>Spin</button></li>
+            <script>
+                // Spin
+                var boxOne = document.getElementsByClassName('Magic8Ball')[0];
 
-        document.getElementsByClassName('button1')[0].onclick = function() {
-          if(this.innerHTML === 'Spin') 
-          { 
-            this.innerHTML = 'Stop';
-            boxOne.classList.add('spin');
-          } else if (this.innerHTML === 'Stop')
-          {  
-            this.innerHTML = 'Answer';
-            boxOne.classList.remove('spin');
-          } else {
-            this.innerHTML = 'Spin';
-            boxOne.classList.remove('output');
-          }  
-        }
-        </script>
-          <li><button class='button2' value='shake-crazy'>Shake</button></li>
-        <script>
-        // Shake
-        var boxTwo = document.getElementsByClassName('Magic8Ball')[0]
+                document.getElementsByClassName('button1')[0].onclick = function() {
+                    if(this.innerHTML === 'Spin') 
+                    { 
+                        this.innerHTML = 'Stop';
+                        boxOne.classList.add('spin');
+                    } else if (this.innerHTML === 'Stop') {  
+                        this.innerHTML = 'Answer';
+                        boxOne.classList.remove('spin');
+                    } else {
+                        this.innerHTML = 'Spin';
+                        boxOne.classList.remove('output');
+                    }  
+                }
+            </script>
+            
+            <li><button class='button2' value='shake-crazy'>Shake</button></li>
+            <script>
+                // Shake
+                var boxTwo = document.getElementsByClassName('Magic8Ball')[0];
 
-        document.getElementsByClassName('button2')[0].onclick = function() {
-          if(this.innerHTML === 'Shake') 
-          { 
-            this.innerHTML = 'Stop';
-            boxTwo.classList.add('shake-crazy');
-          } else if (this.innerHTML === 'Stop')
-          {  
-            this.innerHTML = 'Answer';
-            boxTwo.classList.remove('shake-crazy');
-          } else {
-            this.innerHTML = 'Shake';
-            boxTwo.classList.remove('output');
-          }
-        }
-    </script>
-      </ul>
-      </div>
-   
-
-    <div id="forget">
-      <a href='javascript:void(0);' onclick='forgetUserName()'>Forget Me</a>
+                document.getElementsByClassName('button2')[0].onclick = function() {
+                    if(this.innerHTML === 'Shake') 
+                    { 
+                        this.innerHTML = 'Stop';
+                        boxTwo.classList.add('shake-crazy');
+                    } else if (this.innerHTML === 'Stop') {  
+                        this.innerHTML = 'Answer';
+                        boxTwo.classList.remove('shake-crazy');
+                    } else {
+                        this.innerHTML = 'Shake';
+                        boxTwo.classList.remove('output');
+                    }
+                }
+            </script>
+    
+            <li><button class='button3' value='roll'>Roll</button></li>
+            <script>
+                // Roll
+                var boxthree = document.getElementsByClassName('Magic8Ball')[0];
+                
+                document.getElementsByClassName('button3')[0].onclick = function() {
+                    if(this.innerHTML === 'Roll') 
+                    { 
+                        this.innerHTML = 'Stop';
+                        boxTwo.classList.add('roll');
+                    } else if (this.innerHTML === 'Stop') {  
+                        this.innerHTML = 'Answer';
+                        boxTwo.classList.remove('roll');
+                    } else {
+                        this.innerHTML = 'Roll';
+                        boxTwo.classList.remove('output');
+                    }
+                }
+            </script>
+        </ul>
     </div>
+   
+    <div id="forget">
+        <a href='javascript:void(0);' onclick='forgetUserName()'>Forget Me</a>
+    </div>
+    
   </body>
 </html>
