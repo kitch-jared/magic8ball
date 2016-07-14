@@ -5,36 +5,6 @@
     <title>Magic 8 Ball Stuff</title>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="css/8ball.css" rel="stylesheet" type="text/css" />
-    <style>
-        #userNamePromptOverlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 25;
-            background-color: rgba(0,0,0,0.9);
-            display: none;
-        }
-        
-        #userNamePrompt {
-            background-color: #222222;
-            border: 20px solid #222222;
-            border-radius: 20px;
-            padding: 10px;
-            width: 75%;
-            max-width: 500px;
-            height: 75%;
-            max-height: 170px;
-            color: white;
-            position: fixed;
-            margin: auto;
-            top:0; right:0; bottom:0; left:0;
-            overflow-y: auto;
-            overflow-x: hidden;
-            display: none;
-        }
-    </style>
     
     <script type="text/javascript">
         function getUserName () {
