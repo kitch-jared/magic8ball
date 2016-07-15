@@ -66,7 +66,7 @@
                     <div class="innerBall"></div>
                     <div class="circle"></div>
                     <div class="tri"></div>
-                    <div class="output"></div>
+                    <div class="output">This is an answer.</div>
                 </div>
             </div>
         </div>
