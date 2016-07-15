@@ -5,82 +5,70 @@
  <title>Magic 8 Ball</title>
  <link href="" rel="stylesheet" type="text/css"/>
  <script type="text/javascript">
-   var posReply = new XMLHttpRequest();
-            var url = "PositiveReplies.txt";
-            
-            posReply.onreadystatechange = function() {
-                if (posReply.readystate == 4 && posReply.status == 200){
-                    var positiveArray = JSON.parse(posReply.responseText);
-                    magic(positiveArray);
-                }
-            };
-            posReply.open("GET", url, true);
-            posReply.send();
-            
-            function magic(answers) {
-                var reply = '';
-                var i;
-                for (i = 0; i < answers.length; i++) {
-                    reply += answers[i].yesAnswer;
-                }
-                document.getElementById("output").innerHTML = reply;
-            } 
-            
-  var negReply = new XMLHttpRequest();
-            var url = "NegativeReplies.txt";
-            
-            negReply.onreadystatechange = function() {
-                if (negReply.readystate == 4 && negReply.status == 200){
-                    var negativeArray = JSON.parse(negReply.responseText);
-                    magic(negativeArray);
-                }
-            };
-            xmlhttp.open("GET", url, true);
-            xmlhttp.send();
-            
-            function magic(answers) {
-                var reply = '';
-                var i;
-                for (i = 0; i < answers.length; i++) {
-                    reply += answers[i].noAnswer;
-                }
-                document.getElementById("output").innerHTML = reply;
-            }  
-  var neutReply = new XMLHttpRequest();
-            var url = "NeutralReplies.txt";
-            
-            neutReply.onreadystatechange = function() {
-                if (neutReply.readystate == 4 && neutReply.status == 200){
-                    var neutralArray = JSON.parse(neutReply.responseText);
-                    magic(neutralArray);
-                }
-            };
-            neutReply.open("GET", url, true);
-            neutReply.send();
-            
-            function magic(answers) {
-                var reply = '';
-                var i;
-                for (i = 0; i < answers.length; i++) {
-                    reply += answers[i].ntAnswer;
-                }
-                document.getElementById("output").innerHTML = reply;
-            }  
- 
- /* Input: 
- + *Processing: 
- + * Output: 
- + */
-  
+    function loadJSON(){
+            var url = "M8Ball.json";
+            var http_request = new XMLHttpRequest();
+            try{
+               // Opera 8.0+, Firefox, Chrome, Safari
+               http_request = new XMLHttpRequest();
+            }catch (e){
+               // Internet Explorer Browsers
+               try{
+                  http_request = new ActiveXObject("Msxml2.XMLHTTP");
+					
+               }catch (e) {
+				
+                  try{
+                     http_request = new ActiveXObject("Microsoft.XMLHTTP");
+                  }catch (e){
+                     // Something went wrong
+                     alert("Your browser broke!");
+                     return false;
+                  }
+					
+               }
+            }
+			
+            http_request.onreadystatechange = function(){
+			
+               if (http_request.readyState == 4 && http_request.status == 200){
+                  // Javascript function JSON.parse to parse JSON data
+                  var jsonObj = JSON.parse(http_request.responseText);
+                  var display = '';
+                  // jsonObj variable now contains the data structure and can
+                  // be accessed as jsonObj.name and jsonObj.country.
+                  //document.getElementById("type").innerHTML = jsonObj.type;
+                  document.getElementById("show").innerHTML = jsonObj.yAnswer;
+                  display = jsonObj.yAnswer;
+                  /*for (var i = 0; i<jsonObj.length; i++)
+                    if (jsonObj.type == "positive") {
+                        display = jsonObj.yAnswer[i];
+                    } else if (jsonObj.type == "negative") {
+                        display = jsonObj.Answer[i];
+                    }
+                    else {
+                        display = jsonObj.ntAnswer[i];
+                    }
+                }*/
+            }
+            http_request.open("GET", url, true);
+            http_request.send();
+         }
+		
+     
   function possibleAnswers(ans) {
  	var select = Math.floor(Math.random() * ans.length);
  	var ball = ans[select];
  		return ball;
  }
   
-  function magic() {
+  /*function magic() {
+      if (url.type == positive){
+          for (var i = 0; i < )
+      }
+          
   
-  /*var answer = [ "It is certain", "It is decidedly so", "Without a doubt", 
+   var answer = [ "It is certain", "It is decidedly so", "Without a doubt", 
  					"Yes definitely", "You may rely on it", "As I see it, yes",
  					"Most likely", "Outlook good", "Yes", "Signs point to yes",
  					"Reply hazy try again", "Ask again later", "Better not tell you now",
@@ -100,20 +88,19 @@
                                      "Not even possible", "This is a joke right?", "You're seriously asking me that!?", "Bad idea"
                                      , "Think on it, the answer will come" ];
   
- 	var magicAnswer = possibleAnswers(answer);*/
+ 	var magicAnswer = possibleAnswers(answer);
   
-  
-  document.getElementById('output').innerHTML = magicAnswer;
+  document.getElementById('show').innerHTML = magicAnswer;
  	
-  }
+  }*/
   </script>
  </head>
  <body>
  <p id="text">This is a Magic 8 Ball!<br>
  Ask a 'Yes' or 'No' question!<br></p>
  
- <button type="button" onclick='magic()'>Ask A Question</button>
- <p><div id='output'></div></p>
+ <button type="button" onclick='loadJason()'>Ask A Question</button>
+ <p><div id='show'></div></p>
  
  </body>
  </html>
