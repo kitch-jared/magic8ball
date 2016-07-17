@@ -19,7 +19,7 @@
 		    document.getElementById("answers").innerHTML = reply;
 		    }
                 };
-            http_request.open("GET", url + Math.random(), true);
+            http_request.open("GET", url, true);
             http_request.setRequestHeader("content-type","application/json");
             http_request.send();
         }
