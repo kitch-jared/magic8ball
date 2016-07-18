@@ -43,5 +43,5 @@
     {"type": "neutral", "answer":"I don't know"},
     {"type": "neutral", "answer":"Maybe pigs can fly"},
     {"type": "neutral", "answer":"What did you say?"},
-    {"type": "neutral", "answer":"Don't worry about it"},
+    {"type": "neutral", "answer":"Don't worry about it"}
 ]
