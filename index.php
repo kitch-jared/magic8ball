@@ -28,7 +28,6 @@
             localStorage.removeItem('Magic8BallUserName');
             window.location.reload();
         }
-
         function docLoad() {
             getUserName(); // name will be stored in Local Storage as Magic8BallUserName
         }
@@ -38,7 +37,6 @@
             xhttp.onreadystatechange = function() { // Using
                 if (xhttp.readyState === 4 && xhttp.status === 200) {
                     var jsonArray = JSON.parse(xhttp.responseText);
-
                     var select = Math.floor(Math.random() * jsonArray.length);
                     var selectedAnswer = jsonArray[select];
             
@@ -48,7 +46,6 @@
             xhttp.open("GET", "answers.json", true);
             xhttp.send();
         };
-
  
     </script>
 
@@ -95,7 +92,6 @@
             <script>
                 // Spin
                 var boxOne = document.getElementsByClassName('Magic8Ball')[0];
-
                 document.getElementsByClassName('button1')[0].onclick = function() {
                     if(this.innerHTML === 'Spin') 
                     { 
@@ -113,7 +109,6 @@
             <script>
                 // Shake
                 var boxTwo = document.getElementsByClassName('Magic8Ball')[0];
-
                 document.getElementsByClassName('button2')[0].onclick = function() {
                     if(this.innerHTML === 'Shake') 
                     { 
