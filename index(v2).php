@@ -32,23 +32,6 @@
         function docLoad() {
             getUserName(); // name will be stored in Local Storage as Magic8BallUserName
         }
-        
-        function getAnswer() {
-            var xhttp = new XMLHttpRequest(); // Create your object of XMLHttpRequest
-            xhttp.onreadystatechange = function() { // Using
-                if (xhttp.readyState === 4 && xhttp.status === 200) {
-                    var jsonArray = JSON.parse(xhttp.responseText);
-
-                    var select = Math.floor(Math.random() * jsonArray.length);
-                    var selectedAnswer = jsonArray[select];
-            
-                    document.getElementById("output").innerHTML = selectedAnswer.answer;
-                }
-            };
-            xhttp.open("GET", "answers.json", true);
-            xhttp.send();
-        };
-
  
     </script>
 
@@ -83,7 +66,7 @@
                     <div class="innerBall"></div>
                     <div class="circle"></div>
                     <div class="tri"></div>
-                    <div class="output"><span id="output"></span></div>
+                    <div class="output">This is an answer.</div>
                 </div>
             </div>
         </div>
@@ -102,12 +85,11 @@
                         this.innerHTML = 'Stop';
                         boxOne.classList.add('spin');
                     } else if (this.innerHTML === 'Stop') {  
-                        this.innerHTML = 'Reset';
+                        this.innerHTML = 'Answer';
                         boxOne.classList.remove('spin');
-                        getAnswer();
                     } else {
                         this.innerHTML = 'Spin';
-                        document.getElementById ('output').innerHTML = "";
+                        boxOne.classList.remove('output');
                     }  
                 }
             </script>
@@ -123,12 +105,11 @@
                         this.innerHTML = 'Stop';
                         boxTwo.classList.add('shake-crazy');
                     } else if (this.innerHTML === 'Stop') {  
-                        this.innerHTML = 'Reset';
+                        this.innerHTML = 'Answer';
                         boxTwo.classList.remove('shake-crazy');
-                        getAnswer();
                     } else {
                         this.innerHTML = 'Shake';
-                        document.getElementById ('output').innerHTML = "";
+                        boxTwo.classList.remove('output');
                     }
                 }
             </script>
@@ -144,12 +125,11 @@
                         this.innerHTML = 'Stop';
                         boxTwo.classList.add('roll');
                     } else if (this.innerHTML === 'Stop') {  
-                        this.innerHTML = 'Reset';
+                        this.innerHTML = 'Answer';
                         boxTwo.classList.remove('roll');
-                        getAnswer();
                     } else {
                         this.innerHTML = 'Roll';
-                        document.getElementById ('output').innerHTML = "";
+                        boxTwo.classList.remove('output');
                     }
                 }
             </script>
