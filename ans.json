@@ -1,263 +1,264 @@
-
-        {
+{
+    "ans":[ {
             "type":"positive",
-            "yAnswer": "It is certain"
+            "answer": "It is certain"
         },
         {
             "type": "positive",
-            "yAnswer":"It is decidedly so"
-        },
-        
-        {
-            "type": "positive",
-            "yAnswer":"Without a doubt"
+            "answer":"It is decidedly so"
         },
         {
             "type": "positive",
-            "yAnswer":"Yes definitely"
+            "answer":"Without a doubt"
         },
         {
             "type": "positive",
-            "yAnswer":"You may rely on it"
+            "answer":"Yes definitely"
         },
         {
             "type": "positive",
-            "yAnswer":"As I see it, yes"
+            "answer":"You may rely on it"
         },
         {
             "type": "positive",
-            "yAnswer":"Most likely"
+            "answer":"As I see it, yes"
         },
         {
             "type": "positive",
-            "yAnswer":"Outlook good"
+            "answer":"Most likely"
         },
         {
             "type": "positive",
-            "yAnswer":"Yes"
+            "answer":"Outlook good"
         },
         {
             "type": "positive",
-            "yAnswer":"Signs point to yes"
+            "answer":"Yes"
         },
         {
             "type": "positive",
-            "yAnswer":"Of course silly"
+            "answer":"Signs point to yes"
         },
         {
             "type": "positive",
-            "yAnswer":"Why do you doubt?"
+            "answer":"Of course silly"
         },
         {
             "type": "positive",
-            "yAnswer":"I think so"
+            "answer":"Why do you doubt?"
         },
         {
             "type": "positive",
-            "yAnswer":"Maybe next year" 
+            "answer":"I think so"
         },
         {
             "type": "positive",
-            "yAnswer":"You can bet on it"
+            "answer":"Maybe next year" 
         },
         {
             "type": "positive",
-            "yAnswer":"Most definitely"
+            "answer":"You can bet on it"
         },
         {
             "type": "positive",
-            "yAnswer":"Quite absolute"
+            "answer":"Most definitely"
         },
         {
             "type": "positive",
-            "yAnswer":"Sorta"
+            "answer":"Quite absolute"
         },
         {
             "type": "positive",
-            "yAnswer":"Kinda"
+            "answer":"Sorta"
         },
         {
             "type": "positive",
-            "yAnswer":"With luck, yes"
+            "answer":"Kinda"
         },
         {
             "type": "positive",
-            "yAnswer":"You can bet on it"
+            "answer":"With luck, yes"
         },
         {
             "type": "positive",
-            "yAnswer":"Just do it!"
+            "answer":"You can bet on it"
         },
         {
             "type": "positive",
-            "yAnswer":"If you try one more time I might say yes"
+            "answer":"Just do it!"
         },
         {
             "type": "positive",
-            "yAnswer":"Yes, but you didn't hear it from me"
+            "answer":"If you try one more time I might say yes"
         },
         {
             "type": "positive",
-            "yAnswer":"Uhh, I think that's a yes?"
+            "answer":"Yes, but you didn't hear it from me"
+        },
+        {
+            "type": "positive",
+            "answer":"Uhh, I think that's a yes?"
         },
         {
             "type":"negative",
-            "nAnswer":"Don't count on it"
+            "answer":"Don't count on it"
         },
         {
             "type": "negative",
-            "nAnswer":"My reply is no"
+            "answer":"My reply is no"
         },
         {
             "type": "negative",
-            "nAnswer":"My sources say no"
+            "answer":"My sources say no"
         },
         {
             "type": "negative",
-            "nAnswer":"Outlook not so good"
+            "answer":"Outlook not so good"
         },
         {
             "type": "negative",
-            "nAnswer":"Very doubtful"
+            "answer":"Very doubtful"
         },
         {
             "type": "negative",
-            "nAnswer":"No"
+            "answer":"No"
         },
         {
             "type": "negative",
-            "nAnswer":"Never"
+            "answer":"Never"
         },
         {
             "type": "negative",
-            "nAnswer":"Not exactly"
+            "answer":"Not exactly"
         },
         {
             "type": "negative",
-            "nAnswer":"Even with luck, no"
+            "answer":"Even with luck, no"
         },
         {
             "type": "negative",
-            "nAnswer":"I have no idea..."
+            "answer":"I have no idea..."
         },
         {
             "type": "negative",
-            "nAnswer":"I got nothing"
+            "answer":"I got nothing"
         },
         {
             "type": "negative",
-            "nAnswer":"Error detected in your future"
+            "answer":"Error detected in your future"
         },
         {
             "type": "negative",
-            "nAnswer":"That would be a mistake"
+            "answer":"That would be a mistake"
         },
         {
             "type": "negative",
-            "nAnswer":"Turn back now"
+            "answer":"Turn back now"
         },
         {
             "type": "negative",
-            "nAnswer":"No, but technically yes"
+            "answer":"No, but technically yes"
         },
         {
             "type": "negative",
-            "nAnswer":"Should have asked yesterday"
+            "answer":"Should have asked yesterday"
         },
         {
             "type": "negative",
-            "nAnswer":"Not even possible"
+            "answer":"Not even possible"
         },
         {
             "type": "negative",
-            "nAnswer": "Bad idea"
+            "answer": "Bad idea"
         },
         {
             "type": "negative",
-            "nAnswer":"Better not tell you now"
+            "answer":"Better not tell you now"
         },
         {
             "type": "negative",
-            "nAnswer":"Cannot predict now"
+            "answer":"Cannot predict now"
         },
         {
             "type": "negative",
-            "nAnswer":"In your dreams"
+            "answer":"In your dreams"
         },
         {
             "type": "negative",
-            "nAnswer":"Don't ask again"
+            "answer":"Don't ask again"
         },
         {
             "type": "negative",
-            "nAnswer":"Like that'll ever happen"
+            "answer":"Like that'll ever happen"
         },
         {
             "type":"neutral",
-            "ntAnswer":"Reply hazy try again"
+            "answer":"Reply hazy try again"
         },
         {
             "type":"neutral",
-            "ntAnswer":"Ask again later"
+            "answer":"Ask again later"
         },
         {
             "type":"neutral",
-            "ntAnswer":"Concentrate and ask again"
+            "answer":"Concentrate and ask again"
         },
         {
             "type":"neutral",
-            "ntAnswer":"Why would you ask such a silly question?"
+            "answer":"Why would you ask such a silly question?"
         },
         {
             "type":"neutral",
-            "ntAnswer":"Ask someone else"
+            "answer":"Ask someone else"
         },
         {
             "type":"neutral",
-            "ntAnswer":"Try another 8 ball"
+            "answer":"Try another 8 ball"
         },
         {
             "type":"neutral",
-            "ntAnswer":"I don't know"
+            "answer":"I don't know"
         },
         {
             "type":"neutral",
-            "ntAnswer":"Maybe pigs can fly"
+            "answer":"Maybe pigs can fly"
         },
         {
             "type":"neutral",
-            "ntAnswer":"What did you say?"
+            "answer":"What did you say?"
         },
         {
             "type":"neutral",
-            "ntAnswer":"Sorry I didn't hear that"
+            "answer":"Sorry I didn't hear that"
         },
         {
             "type":"neutral",
-            "ntAnswer":"You already know the answer to that"
+            "answer":"You already know the answer to that"
         },
         {
             "type":"neutral",
-            "ntAnswer":"So I asked my friend, he didn't know either..."
+            "answer":"So I asked my friend, he didn't know either..."
         },
         {
             "type":"neutral",
-            "ntAnswer":"Don't worry about it" 
+            "answer":"Don't worry about it" 
         },
         {
             "type":"neutral",
-            "ntAnswer":"Only God knows the answer to that..."
+            "answer":"Only God knows the answer to that..."
         },
         {
             "type":"neutral",
-            "ntAnswer":"This is a joke right?"
+            "answer":"This is a joke right?"
         },
         {
             "type":"neutral",
-            "ntAnswer":"You're seriously asking me that!?"
+            "answer":"You're seriously asking me that!?"
         },
         {
             "type":"neutral",
-            "ntAnswer":"Think on it,the answer will come" 
+            "answer":"Think on it,the answer will come" 
         }
-    
+    ]
+}
+   
