@@ -1,6 +1,5 @@
 [
     {"type": "positive", "answer": "It is certain" },
-    {"type": "positive", "answer": "It is decidedly so"},
     {"type": "positive", "answer": "Without a doubt"},
     {"type": "positive", "answer": "Yes definitely"},
     {"type": "positive", "answer":"You may rely on it"},
@@ -8,7 +7,6 @@
     {"type": "positive", "answer":"Most likely"},
     {"type": "positive", "answer":"Outlook good"},
     {"type": "positive", "answer":"Yes"},
-    {"type": "positive", "answer":"Signs point to yes"},
     {"type": "positive", "answer":"Of course silly"},
     {"type": "positive", "answer":"Why do you doubt?"},
     {"type": "positive", "answer":"I think so"},
