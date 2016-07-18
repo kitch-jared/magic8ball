@@ -101,13 +101,10 @@
                     { 
                         this.innerHTML = 'Stop';
                         boxOne.classList.add('spin');
-                    } else if (this.innerHTML === 'Stop') {  
-                        this.innerHTML = 'Reset';
+                    } else {  
+                        this.innerHTML = 'Spin';
                         boxOne.classList.remove('spin');
                         getAnswer();
-                    } else {
-                        this.innerHTML = 'Spin';
-                        document.getElementById ('output').innerHTML = "";
                     }  
                 }
             </script>
@@ -122,13 +119,10 @@
                     { 
                         this.innerHTML = 'Stop';
                         boxTwo.classList.add('shake-crazy');
-                    } else if (this.innerHTML === 'Stop') {  
-                        this.innerHTML = 'Reset';
+                    } else {  
+                        this.innerHTML = 'Shake';
                         boxTwo.classList.remove('shake-crazy');
                         getAnswer();
-                    } else {
-                        this.innerHTML = 'Shake';
-                        document.getElementById ('output').innerHTML = "";
                     }
                 }
             </script>
@@ -143,13 +137,10 @@
                     { 
                         this.innerHTML = 'Stop';
                         boxTwo.classList.add('roll');
-                    } else if (this.innerHTML === 'Stop') {  
-                        this.innerHTML = 'Reset';
+                    } else {  
+                        this.innerHTML = 'Roll';
                         boxTwo.classList.remove('roll');
                         getAnswer();
-                    } else {
-                        this.innerHTML = 'Roll';
-                        document.getElementById ('output').innerHTML = "";
                     }
                 }
             </script>
