@@ -181,7 +181,7 @@
     <div id="forget">
         <br>1) Select your method above.
         <br>2) Press stop
-        <br>3) Hover over the Magic 8 Ball<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to see your answers.
+        <br>3) Hover over/Tap the Magic 8 Ball<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to see your answers.
         <br>
         <br><a href='javascript:void(0);' onclick='forgetUserName()'>Forget Me</a>
     </div>
