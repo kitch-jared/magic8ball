@@ -55,16 +55,24 @@
                 
                 var storedAnswers = JSON.parse(localStorage.getItem('Magic8BallStoredAnswers'));
                 
-                for (i = 0; i < storedAnswers.length; i++) {
-                    if (selectedAnswer.answer === storedAnswers.answer) {
+                if (!storedAnswers) {
+                    storedAnswers = [{"type": "temp1", "answer": "temp1"}];
+                    localStorage.setItem('Magic8BallStoredAnswers', JSON.stringify(storedAnswers));
+                }
+                
+                for (var i = 0; i < storedAnswers.length; i++) {
+                    if (storedAnswers[i].answer ===
+                            selectedAnswer.answer) {
                         duplicate = true;
                         break;
                     }
                     duplicate = false;
                 }
             }
+            /*
             storedAnswers.push(selectedAnswer);
             localStorage.setItem('Magic8BallStoredAnswers', storedAnswers);
+            */
         };
  
     </script>
