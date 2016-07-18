@@ -120,6 +120,7 @@
             <script>
                 // Spin
                 var boxOne = document.getElementsByClassName('Magic8Ball')[0];
+                
                 document.getElementsByClassName('button1')[0].onclick = function() {
                     if(this.innerHTML === 'Spin') 
                     { 
@@ -129,8 +130,8 @@
                         this.innerHTML = 'Spin';
                         boxOne.classList.remove('spin');
                         getAnswer();
-                    }  
-                }
+                    }
+                };
             </script>
             
             <li><button class='button2' value='shake-crazy'>Shake</button></li>
@@ -147,32 +148,35 @@
                         boxTwo.classList.remove('shake-crazy');
                         getAnswer();
                     }
-                }
+                };
             </script>
     
             <li><button class='button3' value='roll'>Roll</button></li>
             <script>
                 // Roll
-                var boxthree = document.getElementsByClassName('Magic8Ball')[0];
+                var boxThree = document.getElementsByClassName('Magic8Ball')[0];
                 
                 document.getElementsByClassName('button3')[0].onclick = function() {
                     if(this.innerHTML === 'Roll') 
                     { 
                         this.innerHTML = 'Stop';
-                        boxTwo.classList.add('roll');
+                        boxThree.classList.add('roll');
                     } else {  
                         this.innerHTML = 'Roll';
-                        boxTwo.classList.remove('roll');
+                        boxThree.classList.remove('roll');
                         getAnswer();
                     }
-                }
+                };
             </script>
         </ul>
     </div>
    
     <div id="forget">
+        <br>1) Select your method above.
+        <br>2) Press stop
+        <br>3) Hover over the Magic 8 Ball<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to see your answers.
         <br>
-        <a href='javascript:void(0);' onclick='forgetUserName()'>Forget Me</a>
+        <br><a href='javascript:void(0);' onclick='forgetUserName()'>Forget Me</a>
     </div>
     
   </body>
