@@ -311,7 +311,7 @@ translate(-50%,-50%) rotate(80deg);
 		left: 50%;
 	}
 	10% {
-		transform: rotate(360deg);
+		transform: rotate(1080deg);
 		left: 65%;
 	}
 	20% {
@@ -319,7 +319,7 @@ translate(-50%,-50%) rotate(80deg);
 		left: 35%;
 	}
 	30% {
-		transform: rotate(360deg);
+		transform: rotate(1080deg);
 		left: 65%;
 	}
 	40% {
@@ -327,7 +327,7 @@ translate(-50%,-50%) rotate(80deg);
 		left: 35%;
 	}
 	50%{
-		transform: rotate(360deg);
+		transform: rotate(1080deg);
 		left: 65%;
 	}
 	60%{
@@ -335,7 +335,7 @@ translate(-50%,-50%) rotate(80deg);
 		left: 35%;
 	}
 	70% {
-		transform: rotate(360deg);
+		transform: rotate(1080deg);
 		left: 65%;
 	}
 	80%{
@@ -343,7 +343,7 @@ translate(-50%,-50%) rotate(80deg);
 		left: 35%;
 	}
 	90%{
-		transform: rotate(360deg);
+		transform: rotate(1080deg);
 		left: 65%;
 	}			
 	100% {
