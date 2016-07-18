@@ -6,6 +6,7 @@
     <link href="css/8ball.css" rel="stylesheet" type="text/css" />
     
     <script type="text/javascript">
+        
         function getUserName () {
             var storedUser = localStorage.getItem('Magic8BallUserName');
             
@@ -28,25 +29,59 @@
             localStorage.removeItem('Magic8BallUserName');
             window.location.reload();
         }
-        function docLoad() {
-            getUserName(); // name will be stored in Local Storage as Magic8BallUserName
-        }
         
-        function getAnswer() {
-            var xhttp = new XMLHttpRequest(); // Create your object of XMLHttpRequest
-            xhttp.onreadystatechange = function() { // Using
+        function getResponses() {
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function() {
                 if (xhttp.readyState === 4 && xhttp.status === 200) {
-                    var jsonArray = JSON.parse(xhttp.responseText);
-                    var select = Math.floor(Math.random() * jsonArray.length);
-                    var selectedAnswer = jsonArray[select];
-            
-                    document.getElementById("output").innerHTML = selectedAnswer.answer;
+                    var retrievedAnswers = JSON.parse(xhttp.responseText);
+                    localStorage.setItem('Magic8BallAllAnswers', JSON.stringify(retrievedAnswers));
                 }
             };
             xhttp.open("GET", "answers.json", true);
             xhttp.send();
-        };
+        }
+        
+        function getAnswer() {
+
+            var usedAnswers = JSON.parse(localStorage.getItem('Magic8BallUsedAnswers'));
+            var allAnswers = JSON.parse(localStorage.getItem('Magic8BallAllAnswers'));
+            
+            if (!usedAnswers) {
+                usedAnswers = [{"type": "", "answer": ""}];
+                localStorage.setItem('Magic8BallUsedAnswers', JSON.stringify(usedAnswers));
+            }
+
+            var selectedAnswer;
+            var duplicate = true;
+            
+            while (duplicate) {
+                selectedAnswer = allAnswers[Math.floor(Math.random() * allAnswers.length)];
+                
+                for (var i = 0; i < usedAnswers.length; i++) {
+                    if (usedAnswers[i].answer === selectedAnswer.answer) {
+                        duplicate = true;
+                        break;
+                    }
+                    duplicate = false;
+                }
+            }
+            
+            document.getElementById("output").innerHTML = selectedAnswer.answer;
+            
+            if (usedAnswers.length > 9) {
+                usedAnswers.shift();
+            }
+            
+            usedAnswers.push(selectedAnswer);
+            localStorage.setItem('Magic8BallUsedAnswers', JSON.stringify(usedAnswers));
+        } // end getAnswer()
  
+        function docLoad() {
+            getUserName(); // name will be stored in Local Storage as Magic8BallUserName
+            getResponses(); // all responses will be stored in Local Storage as Magic8BallAllAnswers
+        }
     </script>
 
   </head>

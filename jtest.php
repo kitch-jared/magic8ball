@@ -6,6 +6,7 @@
     <link href="css/8ball.css" rel="stylesheet" type="text/css" />
     
     <script type="text/javascript">
+        
         function getUserName () {
             var storedUser = localStorage.getItem('Magic8BallUserName');
             
@@ -28,53 +29,59 @@
             localStorage.removeItem('Magic8BallUserName');
             window.location.reload();
         }
-        function docLoad() {
-            getUserName(); // name will be stored in Local Storage as Magic8BallUserName
+        
+        function getResponses() {
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState === 4 && xhttp.status === 200) {
+                    var retrievedAnswers = JSON.parse(xhttp.responseText);
+                    localStorage.setItem('Magic8BallAllAnswers', JSON.stringify(retrievedAnswers));
+                }
+            };
+            xhttp.open("GET", "answers.json", true);
+            xhttp.send();
         }
         
         function getAnswer() {
+
+            var usedAnswers = JSON.parse(localStorage.getItem('Magic8BallUsedAnswers'));
+            var allAnswers = JSON.parse(localStorage.getItem('Magic8BallAllAnswers'));
             
+            if (!usedAnswers) {
+                usedAnswers = [{"type": "", "answer": ""}];
+                localStorage.setItem('Magic8BallUsedAnswers', JSON.stringify(usedAnswers));
+            }
+
+            var selectedAnswer;
             var duplicate = true;
             
             while (duplicate) {
-                var xhttp = new XMLHttpRequest(); // Create your object of XMLHttpRequest
-                var jsonArray;
-                var selectedAnswer;
-                xhttp.onreadystatechange = function() { // Using
-                    if (xhttp.readyState === 4 && xhttp.status === 200) {
-                        jsonArray = JSON.parse(xhttp.responseText);
-                        var select = Math.floor(Math.random() * jsonArray.length);
-                        selectedAnswer = jsonArray[select];
-            
-                        document.getElementById("output").innerHTML = selectedAnswer.answer;
-                    }
-                };
+                selectedAnswer = allAnswers[Math.floor(Math.random() * allAnswers.length)];
                 
-                xhttp.open("GET", "answers.json", true);
-                xhttp.send();
-                
-                var storedAnswers = JSON.parse(localStorage.getItem('Magic8BallStoredAnswers'));
-                
-                if (!storedAnswers) {
-                    storedAnswers = [{"type": "temp1", "answer": "temp1"}];
-                    localStorage.setItem('Magic8BallStoredAnswers', JSON.stringify(storedAnswers));
-                }
-                
-                for (var i = 0; i < storedAnswers.length; i++) {
-                    if (storedAnswers[i].answer ===
-                            selectedAnswer.answer) {
+                for (var i = 0; i < usedAnswers.length; i++) {
+                    if (usedAnswers[i].answer === selectedAnswer.answer) {
                         duplicate = true;
                         break;
                     }
                     duplicate = false;
                 }
             }
-            /*
-            storedAnswers.push(selectedAnswer);
-            localStorage.setItem('Magic8BallStoredAnswers', storedAnswers);
-            */
-        };
+            
+            document.getElementById("output").innerHTML = selectedAnswer.answer;
+            
+            if (usedAnswers.length > 9) {
+                usedAnswers.shift();
+            }
+            
+            usedAnswers.push(selectedAnswer);
+            localStorage.setItem('Magic8BallUsedAnswers', JSON.stringify(usedAnswers));
+        } // end getAnswer()
  
+        function docLoad() {
+            getUserName(); // name will be stored in Local Storage as Magic8BallUserName
+            getResponses(); // all responses will be stored in Local Storage as Magic8BallAllAnswers
+        }
     </script>
 
   </head>
