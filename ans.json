@@ -89,10 +89,6 @@
         },
         {
             "type": "positive",
-            "answer":"If you try one more time I might say yes"
-        },
-        {
-            "type": "positive",
             "answer":"Yes, but you didn't hear it from me"
         },
         {
@@ -157,10 +153,6 @@
         },
         {
             "type": "negative",
-            "answer":"No, but technically yes"
-        },
-        {
-            "type": "negative",
             "answer":"Should have asked yesterday"
         },
         {
@@ -205,10 +197,6 @@
         },
         {
             "type":"neutral",
-            "answer":"Why would you ask such a silly question?"
-        },
-        {
-            "type":"neutral",
             "answer":"Ask someone else"
         },
         {
@@ -237,15 +225,7 @@
         },
         {
             "type":"neutral",
-            "answer":"So I asked my friend, he didn't know either..."
-        },
-        {
-            "type":"neutral",
             "answer":"Don't worry about it" 
-        },
-        {
-            "type":"neutral",
-            "answer":"Only God knows the answer to that..."
         },
         {
             "type":"neutral",
