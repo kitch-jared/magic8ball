@@ -46,17 +46,29 @@ p {
     display: none;
 }
 
-.button1{
-    width:150px;
-    height:25px;
-}
-.button2{
-    width:150px;
-    height:25px;
+button{
+    width:250px;
+    height:35px;
 }
 
-.button3{
-    width:150px;
-    height:25px;    
+button {
+    background-color:white;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;  
+    color: black;
+    border: 2px solid #000000;
+}
+
+button:hover {
+    background-color: #000000;
+    color: white;
 }
 
