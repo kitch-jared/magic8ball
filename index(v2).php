@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device=width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Magic 8 Ball</title>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="css/8ball.css" rel="stylesheet" type="text/css" />
