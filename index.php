@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Magic 8 Ball</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="css/8ball.css" rel="stylesheet" type="text/css" />
     
